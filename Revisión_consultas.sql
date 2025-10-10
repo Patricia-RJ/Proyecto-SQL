@@ -45,9 +45,10 @@ FROM ranked rk
 JOIN payment p
   ON p.rental_id = rk.rental_id
 WHERE rk.rn = 3
-ORDER BY rk.rental_date DESC;
+ORDER BY rk.rental_date DESC
+OFFSET 2 LIMIT 1;
 
--- Obtiene el coste del antepenúltimo alquiler de cada día, ordenando los alquileres por fecha y hora descendente.
+-- Obtiene el coste del antepenúltimo alquiler global, ordenando los alquileres por fecha y hora descendente.
 
 /* 37. Encuentra el ID del actor más bajo y más alto en la tabla actor.*/
 
@@ -74,4 +75,5 @@ WHERE rentas."pelis_distintas" >= 7
 ORDER BY rentas."pelis_distintas" DESC;
 
 -- Clientes con ≥7 películas distintas (COUNT DISTINCT film_id); ordenar por last_name, first_name.
+
 
