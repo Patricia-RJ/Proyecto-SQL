@@ -6,7 +6,7 @@ El objetivo ha sido **resolver 64 consultas** aplicando joins, subconsultas, CTE
 ## 🗂️ Archivos del proyecto
 ├── README.md                         # este documento
 ├── Script-consultas_BBDD.sql         # Q01–Q64 con número + enunciado + comentario + consultas 3, 4,11,37 y 60 corregidas 
-├── Informe de Resultados SQL.pdf     # informe con metodología y resultados
+├── Informe de Resultados SQL.pdf     # informe con metodología y resultados + consultas 3, 4,11,37 y 60 corregidas 
 ├── Esquema BBDD.png                  # diagrama entidad–relación
 └── insights_consultas.md             # frases de insight por consulta 
 ├── Revisión consultas                # Consultas 3,4, 11, 37 y 60 corregidas 
