@@ -14,7 +14,7 @@ ORDER BY "title";
 SELECT "actor_id",
 		CONCAT(a."first_name",' ',a."last_name")
 FROM "actor" AS a
-WHERE "actor_id" BETWEEN '30' AND '40'
+WHERE "actor_id" BETWEEN 30 AND 40
 ORDER BY a."actor_id";
 
  -- Muestra los actores con id 30–40 y su nombre completo, ordenados por id.
@@ -108,9 +108,10 @@ FROM ranked rk
 JOIN payment p
   ON p.rental_id = rk.rental_id
 WHERE rk.rn = 3
-ORDER BY rk.rental_day;
+ORDER BY rk.rental_date DESC
+OFFSET 2 LIMIT 1 ;
 
--- Obtiene el coste del antepenúltimo alquiler de cada día, ordenando los alquileres por fecha y hora descendente.
+-- Obtiene el coste del antepenúltimo alquiler global, ordenando los alquileres por fecha y hora descendente.
 
 
 /* 12. Encuentra el título de las películas en la tabla “film” que no sean ni ‘NC17’ ni ‘G’ en cuanto a su clasificación.*/
@@ -380,10 +381,9 @@ FROM "actor" a;
 
 SELECT  MIN ("actor_id") AS "Id_lower",
 		MAX ("actor_id") AS "Id_Higher"
-FROM "actor" a 
-LIMIT 1;
+FROM "actor" a ;
 
---  Id mínimo y máximo en actor (MIN y MAX); no requiere LIMIT.
+--  Id mínimo y máximo en actor (MIN y MAX).
 
 /* 38. Cuenta cuántos actores hay en la tabla “actor”.*/
 
@@ -695,7 +695,7 @@ WITH "rentas" AS (
  						ON i."inventory_id" = r."inventory_id"
  			 	GROUP BY r."customer_id"
 )
-SELECT c."customer_id", c."first_name", c."last_name", rentas".pelis_distintas"
+SELECT c."customer_id", c."first_name", c."last_name", rentas."pelis_distintas"
 FROM "rentas"
 JOIN "customer" AS c USING ("customer_id")
 WHERE rentas."pelis_distintas" >= 7
@@ -758,6 +758,7 @@ GROUP BY c."customer_id", c."first_name", c."last_name"
 ORDER BY "total_alquiladas" DESC;
 
 -- Total de alquileres por cliente (LEFT JOIN rental y COUNT(rental_id)); ordenar por total_alquiladas DESC.
+
 
 
 
