@@ -5,10 +5,12 @@ El objetivo ha sido **resolver 64 consultas** aplicando joins, subconsultas, CTE
 
 ## 🗂️ Archivos del proyecto
 ├── README.md                         # este documento
-├── Script-consultas_BBDD.sql         # Q01–Q64 con número + enunciado + comentario
+├── Script-consultas_BBDD.sql         # Q01–Q64 con número + enunciado + comentario + consultas 3, 4,11,37 y 60 corregidas 
 ├── Informe de Resultados SQL.pdf     # informe con metodología y resultados
 ├── Esquema BBDD.png                  # diagrama entidad–relación
-└── insights_consultas.md             # frases de insight por consulta
+└── insights_consultas.md             # frases de insight por consulta 
+├── Revisión consultas                # Consultas 3,4, 11, 37 y 60 corregidas 
+
 
 ## ⚙️ Herramientas 
 Este proyecto usa Posgressql como motor de base de datos con puerto local 5432 y Dbeaver como gestor visual.
